@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d4f5f3;
+    font-family: 'Padauk', sans-serif;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2em 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info,
+.map {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-title {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+.info-text {
+    font-size: 1.2em;
+}
+
+.pointerState {
+    background-color: #000000a1;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+footer {
+    width: 100%;
+    text-align: end;
+    margin-top: 1em;
+}
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .info,
+    .map {
+        width: 100%;
+    }
+    .info {
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-container {
+        padding: 1.5em;
+    }
+}
+
+.map-svg {
+    cursor: pointer;
+}
+.map-svg path {
+    stroke: black;
+    stroke-opacity: 0.6;
+}
